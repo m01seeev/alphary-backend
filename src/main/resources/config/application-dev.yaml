@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: alphary-backend
+  r2dbc:
+    url: ${R2DBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  datasource:
+    url: ${JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  graphql:
+    path: "/graphql"
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    url: ${JDBC_URL}
+    user: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
